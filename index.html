@@ -1,0 +1,170 @@
+<!--  -->
+
+<html>
+<head>
+    <title>PS menu 4</title>
+
+	<style>
+	    body {
+				margin: 0px;
+				overflow: hidden;
+			}
+	    	
+	    input:focus,
+			select:focus,
+			textarea:focus,
+			button:focus {outline: none;} /*removes blue border on focus*/
+
+		 #input2 {
+	        opacity: 0;
+	        display: block;
+	        width: 32px;
+	       height: 32px;
+	       border: none;
+     }
+		input[type="color"]::-webkit-color-swatch-wrapper {
+	        padding: 0;}
+	    	input[type="color"]::-webkit-color-swatch {
+	        border: none;}		
+	</style>
+
+	<script src="ashram_canvas_library_4.js"></script>
+
+
+
+		
+		
+
+	</script>
+
+	<!--====================main script======================== -->
+	<script>  
+		var SCREEN_WIDTH = window.innerWidth,
+   			SCREEN_HEIGHT = window.innerHeight,
+
+   			localstorage = true,  //a flag
+			cn,  //main canvas
+			c, //main canvas context
+			io; //input type-file (upload)
+			
+
+		//check for local storage (sets flag)
+		(function() {
+	        if('localStorage' in window && window['localStorage'] !== null) console.log("there's local storage")
+	        else{
+	        	localstorage = false;
+	        	console.log('no local storage!');
+	        }
+	    })();
+
+    	window.onload = function() {
+   			new_canvas('',30,30,'hiddenCanvas',{border:'1px dotted black',  display: 'none', position:'relative', top: 0, center: true,  alive:true} );
+
+			new_canvas('',SCREEN_WIDTH,SCREEN_HEIGHT,'mainCanvas',
+			{border: 'none', bgcolor:  curBGcolor,  position:'absolute', center: false, top: 0, alive: true, drawable: true} );//900 by 500  '1px dotted red'
+
+			//prep for adding a local image file to canvas
+			new_element('input','','','','io', {type: "file",  display: 'none',  position:'absolute', center: true, top: 200}); 
+
+			//initialize globals
+			cn  = $('mainCanvas');
+			c = $c(cn);  //main canvas context
+			io = $('io');
+			//add onchange listener to io 
+    		io.addEventListener('change', handleIO, false);
+
+			new_drawingControlPanel();
+		
+			$('mainCanvas').onmousedown = brush_handler;
+			$('mainCanvas').ontouchstart = brush_handler;
+			mm_init('mm');  
+			ps_init(0);
+
+			var sources = ps.images;
+		 	var n = sources.length;
+		 	//container/menu for ps brushes:
+		    	new_canvas('',44*n,30,'psmenu',
+		    	{border:'none',//'1px solid AliceBlue', 
+		    	position:'relative', top: -15,  alive:true} );  //44  -60
+		    	var psmenu = document.getElementById('psmenu');
+		    	var pscontext = psmenu.getContext('2d');
+	    	//populate menu with ps brushes
+			 	loadImages(sources, function(images){   //callback function
+			 		for (var i = 0; i < n; i++) {
+			 			pscontext.drawImage(images[i],30*i+2, 2, 28, 28);	 	//44 40 40
+			 		}
+			    });	
+		    //add border to menu:
+				// pscontext.beginPath();
+				// pscontext.rect(0, 0, 44*n, 44);
+				// pscontext.lineWidth = 1;
+				// pscontext.strokeStyle = 'AliceBlue';
+				// pscontext.stroke();
+			//highlight cur ps brush:
+				pscontext.beginPath();
+				pscontext.rect(0, 0, 30, 30);  //220 44 44
+				pscontext.lineWidth = 1;
+				pscontext.strokeStyle = 'red';
+				pscontext.stroke();
+			//change cur ps brush on click
+				function PSmenu_handler(e) {
+					//find new cur brush
+					var mousePos = getMousePos(psmenu, e);
+					var x = mousePos.x;
+					var X = Math.floor(x/30);  //44
+					//unselect old cur brush
+					var b = curPSbrush;
+					pscontext.beginPath();
+					pscontext.rect(b*30, 0, 30, 30);  //44 44 44
+					pscontext.lineWidth = 4;  //2
+					pscontext.strokeStyle = curBGcolor;  
+					pscontext.stroke();
+					//clean up antibias after erasing		
+					pscontext.beginPath();
+					pscontext.rect(0, 0, 30*n, 30);  //44 44
+					pscontext.lineWidth = 1;
+					pscontext.strokeStyle = curBGcolor;
+					pscontext.stroke();
+					//register new cur brush and select it
+					curPSbrush = X;
+					curBrush = 'ps';
+					pscontext.beginPath();
+					pscontext.rect(X*30, 0, 30, 30); //44 44 44
+					pscontext.lineWidth = 1;
+					pscontext.strokeStyle = 'red';
+					pscontext.stroke();
+					//change hidden canvas
+					ps_init(curPSbrush); //ppp
+				}
+			    psmenu.onclick = PSmenu_handler;
+
+		    //retrieve storage:
+		    	cn.style.backgroundColor = curBGcolor = storage.get('bgcolor');
+		    	if(localstorage){  
+				    var img = new Image();
+				    img.onload = function(){
+						c.drawImage(img,0,0);
+				    }
+				    img.src = localStorage.canvas;
+				}
+		    	else openit();
+		}
+
+		//stpre user data  on exit 
+		window.onbeforeunload = function(){
+			storage.set('bgcolor', curBGcolor);
+			if(localstorage) {
+				var uri = cn.toDataURL('image/png');
+				localStorage.canvas = uri;
+			}
+			else  return 'Do you want to save or store your work?'
+		}
+	
+
+ 
+
+	</script>
+</head>
+
+<body></body>
+</html>
