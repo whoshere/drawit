@@ -1283,7 +1283,6 @@
                 };
                 if(matches==1){ v = a[0];  mm.value=a[0];};
                 };
-
         mm.addEventListener( 'keyup', mm_completion_handler, false );
         mm.addEventListener( 'keyup', mm_options_handler, false );
         };
@@ -1405,7 +1404,7 @@
         }},false
     );
   
-///////////////saveit, openit/////////////////////
+///////////////saveit, storeit, openit, handleit /////////////////
     function saveit(){
         //textFlatten();
 
@@ -1435,53 +1434,27 @@
     function storeit(){
         storage.set('bgcolor', curBGcolor);
         //save unflattened canvas to disk:
-        window.open(uri,'mywindow'); 
+        window.open(cn.toDataURL('image/png'),'mywindow');
     }
 
-
-
-
-
-// io handler (onchange listener) 
-// will draw selected img file onto main canvas(!):
-function handleIO(e) {
-    var f = e.target.files[0]; // FileList object
-    var reader = new FileReader();
-    reader.onload = function(e) {
-        uri = e.target.result;  
-        var img = new Image();   // Create new img element
-        img.onload = function() {
-            console.log(img.width, img.height);
-            cn.width = img.width;
-            cn.height = img.height;
-            console.log(cn.width, cn.height);
-           // curBGcolor = storage.get(bgcolor);
-            c.drawImage(img, 0, -50); 
-            //show canvas & hide io
-            cn.style.display = 'block';
-            io.style.display = 'none'; 
-        }; 
-        img.src = uri;
+    // io handler (onchange listener) 
+    // will draw selected img file onto main canvas(!):
+    function handleIO(e) {
+        var f = e.target.files[0]; // FileList object
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            uri = e.target.result;  
+            var img = new Image();   // Create new img element
+            img.onload = function() {
+                cn.width = img.width;
+                cn.height = img.height;
+                c.drawImage(img, 0, 0);   //-50 y
+                //show canvas & hide io
+                cn.style.display = 'block';
+                io.style.display = 'none'; 
+            }; 
+            img.src = uri;
+        };
+        // Read  the image file as a data URL.
+        reader.readAsDataURL(f);
     };
-    // Read  the image file as a data URL.
-    reader.readAsDataURL(f);
-}
-
-
-
-
- 
-    
-
-
-
-
-
-
-
-
-  
-    
-    
-    
-       

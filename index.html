@@ -78,6 +78,12 @@
 			$('mainCanvas').onmousedown = brush_handler;
 			$('mainCanvas').ontouchstart = brush_handler;
 			mm_init('mm');  
+
+			// function clicker(){
+			// 	mm.value = '';
+			// 	//mm.removeEventListener('click', clicker);
+			// }
+			mm.addEventListener('click', function(){mm.value = '';},false);
 			ps_init(0);
 
 			var sources = ps.images;
