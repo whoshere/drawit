@@ -36,20 +36,20 @@ Next select some other color, and select the 6th photoshop brush (a broad waterc
 
 There are plenty of other photoshop brushes on the top row for you to  experiment with.
 
-<p> Drawit has  no 'undo' or 'redo' button. But you can erase back to your background color using the eraser brush.  The width of the eraser brush --- and, indeed, of almost all the non-PS brushes --- can be changed using the magic menu. For example, typing '10' or '20' (without quotes) into the menu will yield a rather large eraser, while typing only '1', which is the default value, will yield a fine-stroke eraser. I might mention that you also can use the eraser as an ordinary brush, to create some special effects.
+Drawit has  no 'undo' or 'redo' button. But you can erase back to your background color using the eraser brush.  The width of the eraser brush --- and, indeed, of almost all the non-PS brushes --- can be changed using the magic menu. For example, typing '10' or '20' (without quotes) into the menu will yield a rather large eraser, while typing only '1', which is the default value, will yield a fine-stroke eraser. I might mention that you also can use the eraser as an ordinary brush, to create some special effects.
 
-<p>  To erase your entire drawing, type **'xclear'** (without quotes) in the magic menu.  This will clear the canvas back to your background color.  
+ To erase your entire drawing, type **'xclear'** (without quotes) in the magic menu.  This will clear the canvas back to your background color.  
 
 
-<p> I might mention that, at any time, you can change your background color by choosing a different color from the color-picker and then typing 'b' in the magic menu.  Changing your background color will not effect any of your artwork, although it is surprising how different your artwork may appear when placed atop a different background color.
+ I might mention that, at any time, you can change your background color by choosing a different color from the color-picker and then typing 'b' in the magic menu.  Changing your background color will not effect any of your artwork, although it is surprising how different your artwork may appear when placed atop a different background color.
 
 <h2>Smudge brushes</h2>
 
-<p>  An effect that i enjoy a lot is to rub the canvas with my finger,  to 'smudge up' my lines. (I have a touch screen.) Both the 8th and the 13th photoshop brushes are quite delicate, and work well as smudge brushes. 
+An effect that i enjoy a lot is to rub the canvas with my finger,  to 'smudge up' my lines. (I have a touch screen.) Both the 8th and the 13th photoshop brushes are quite delicate, and work well as smudge brushes. 
 
-<p> This is just a personal observation.  If you like drawing, you'll find your own expressive pathways.
+This is just a personal observation.  If you like drawing, you'll find your own expressive pathways.
 
-<h2>Saving your work</h2>
+## Saving your work
 
 Like Mr.doob's harmony, when you exit the app, drawit will *automatically* save the current state of your drawing (both background color and artwork) into your computer's `localStorage`.Thus you can resume whenever you please.  This applies only if your computer supports localStorage, as most do, but not ipads.
 
@@ -62,9 +62,9 @@ Typing `open` in the magic menu can be useful even on non-ipad computers:  it pe
 
 <h2>Try it in full-screen mode</h2>
 
-<p> I find that using drawit with the browser set to <b>full screen</b> is the most fun because it offers the most immersive experience.   
+ I find that using drawit with the browser set to <b>full screen</b> is the most fun because it offers the most immersive experience.   
 
-<p> In google chrome, full-screen mode is toggled by pressing F11.
+In google chrome, full-screen mode is toggled by pressing `F11`.
 
 
 
