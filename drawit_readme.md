@@ -53,12 +53,12 @@ There are plenty of other photoshop brushes on the top row for you to  experimen
 
 <p> Like Mr.doob's harmony, when you exit the app, drawit will *automatically* save the current state of your drawing (both background color and artwork) into your computer's <b>localStorage</b>.  Thus you can resume whenever you please.  This applies only if your computer supports localStorage, as most do, but not ipads.
 
-<p>  You also can  <b>save</b> your drawing (both background and artwork) to your computer's hard disk by typing `save` (without quotes) into the magic menu. This will automatically open a new window with your drawing. From here you can right-click to open the context menu, and then select the 'save image as...' option from the menu.  Something like this should work even on ipads.  By default, canvas art is saved in the .png format. 
+You also can  **save** your drawing (both background and artwork) to your computer's hard disk by typing `save` (without quotes) into the magic menu. This will automatically open a new window with your drawing. From here you can right-click to open the context menu, and then select the 'save image as...' option from the menu.  Something like this should work even on ipads.  By default, canvas art is saved in the .png format. 
 
-<p> For ipads, saving to hard-disk has the drawback that your background color is 'hard baked' into your drawing; you  no longer can change it.  To mitigate this, drawit allows you to type `store` instead of `save` in the magic menu.  This will store your background color as a cookie, and only save your artwork (without a background color) to your hard disk.  
+For ipads, saving to hard-disk has the drawback that your background color is 'hard baked' into your drawing; you  no longer can change it.  To mitigate this, drawit allows you to type `store` instead of `save` in the magic menu.  This will store your background color as a cookie, and only save your artwork (without a background color) to your hard disk.  
 When you resume, you'll see your old background color. Then, by typing `open` in the magic menu, you can open your saved artwork from your hard disk.  Now you can resume, and also change your background color if you  want.
 
-<p> Typing `open` in the magic menu can be useful even on non-ipad computers:  it permits you to add any image on your hard disk to the main canvas. This is how i included the drawing in the screenshot.
+Typing `open` in the magic menu can be useful even on non-ipad computers:  it permits you to add any image on your hard disk to the main canvas. This is how i included the drawing in the screenshot.
 
 <h2>Try it in full-screen mode</h2>
 
