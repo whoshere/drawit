@@ -1,14 +1,6 @@
-
-<style>
-body {
-	margin: 0 3em 0 3em;
-}
-</style>
-
 Drawit
 ======
  
-
 Drawit is an HTML5 canvas drawing app. 
 
 It offers a good selection of paint brushes for artists, including a few of Mr.doob's **harmony brushes**, 
@@ -20,14 +12,15 @@ Aramisdream's watercolor brushes.
 	unordered list item uses * or + or -, indent items using 2 spaces
 	h2 header = underline dashes ----- or ##
 	h1 header = underline =====  or #
+	>  each line of a block quote (or first and last line)
 
 
 -->
 
 When you first fire-up drawit, you are presented with a minimialistic drawing surface.  Here's a screenshot of drawit's window, with a sample drawing included.
-<!-- 
+
 <img src="drawit.png" height='100%' width='100%' style = 'margin:2em 0 2em 0;'/>
- -->
+
 
  On the top row of drawit's window, one finds thumbnails of all the app's photoshop brushes (see screenshot).  On the second row one finds:
 
@@ -40,18 +33,18 @@ When you first fire-up drawit, you are presented with a minimialistic drawing su
 Getting started
 ---------------
 
-To begin painting, select any color from the color-picker and then type 'b' (without quotes) into the magic menu.  This will immediately add a _background color_ for your painting.
+To begin painting, select any color from the color-picker and then type `b` (without quotes) into the magic menu.  This will immediately add a _background color_ for your painting.
 
 Next select some other color, and select the 6th photoshop brush (a broad watercolor brush) from  the top row. Stroke your canvas with this brush  using either a finger, a stylus, or a mouse. It should be fun!  
 
 There are plenty of other photoshop brushes on the top row for you to  experiment with.
 
-Drawit has  no 'undo' or 'redo' button. But you can erase back to your background color using the eraser brush.  The width of the eraser brush --- and, indeed, of almost all the non-PS brushes --- can be changed using the magic menu. For example, typing '10' or '20' (without quotes) into the menu will yield a rather large eraser, while typing only '1', which is the default value, will yield a fine-stroke eraser. I might mention that you also can use the eraser as an ordinary brush, to create some special effects.
+Drawit has  no `undo` or `redo` button. But you can erase back to your background color using the eraser brush.  The width of the eraser brush --- and, indeed, of almost all the non-PS brushes --- can be changed using the magic menu. For example, typing `10` or `20` (without quotes) into the menu will yield a rather large eraser, while typing only `1`, which is the default value, will yield a fine-stroke eraser. I might mention that you also can use the eraser as an ordinary brush, to create some special effects.
 
- To erase your entire drawing, type **'xclear'** (without quotes) in the magic menu.  This will clear the canvas back to your background color.  
+ To erase your entire drawing, type `xclear` (without quotes) in the magic menu.  This will clear the canvas back to your background color.  
 
 
- I might mention that, at any time, you can change your background color by choosing a different color from the color-picker and then typing 'b' in the magic menu.  Changing your background color will not effect any of your artwork, although it is surprising how different your artwork may appear when placed atop a different background color.
+ I might mention that, at any time, you can change your background color by choosing a different color from the color-picker and then typing `b` in the magic menu.  Changing your background color will not effect any of your artwork, although it is surprising how different your artwork may appear when placed atop a different background color.
 
 <h2>Smudge brushes</h2>
 
