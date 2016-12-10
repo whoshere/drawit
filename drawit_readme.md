@@ -51,7 +51,7 @@ There are plenty of other photoshop brushes on the top row for you to  experimen
 
 <h2>Saving your work</h2>
 
-<p> Like Mr.doob's harmony, when you exit the app, drawit will *automatically* save the current state of your drawing (both background color and artwork) into your computer's <b>localStorage</b>.  Thus you can resume whenever you please.  This applies only if your computer supports localStorage, as most do, but not ipads.
+Like Mr.doob's harmony, when you exit the app, drawit will *automatically* save the current state of your drawing (both background color and artwork) into your computer's `localStorage`.Thus you can resume whenever you please.  This applies only if your computer supports localStorage, as most do, but not ipads.
 
 You also can  **save** your drawing (both background and artwork) to your computer's hard disk by typing `save` (without quotes) into the magic menu. This will automatically open a new window with your drawing. From here you can right-click to open the context menu, and then select the 'save image as...' option from the menu.  Something like this should work even on ipads.  By default, canvas art is saved in the .png format. 
 
