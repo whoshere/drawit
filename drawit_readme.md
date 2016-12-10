@@ -23,12 +23,9 @@ When you first fire-up drawit, you are presented with a minimialistic drawing su
 ![drawit screenshot](drawit.png)
 
 <!-- 
-<img src="drawit.png" height='100%' width='100%' style = 'margin:2em 0 2em 0;'/>
-
-![QuickSettings Panel](images/master_demo.png)
-
-![Animated gif](animation.gif "Animation that shows auto completion") 
+[alt text](relative or absolute path to image)
 -->
+
 
 
  On the top row of drawit's window, one finds thumbnails of all the app's photoshop brushes (see screenshot).  On the second row one finds:
@@ -50,7 +47,7 @@ There are plenty of other photoshop brushes on the top row for you to  experimen
 
 Drawit has  no `undo` or `redo` button. But you can erase back to your background color using the eraser brush.  The width of the eraser brush --- and, indeed, of almost all the non-PS brushes --- can be changed using the magic menu. For example, typing `10` or `20` (without quotes) into the menu will yield a rather large eraser, while typing only `1`, which is the default value, will yield a fine-stroke eraser. I might mention that you also can use the eraser as an ordinary brush, to create some special effects.
 
- To erase your entire drawing, type `xclear` (without quotes) in the magic menu.  This will clear the canvas back to your background color.  
+ To erase your entire drawing, type `xclear`  in the magic menu.  This will clear the canvas back to your background color.  
 
 
  I might mention that, at any time, you can change your background color by choosing a different color from the color-picker and then typing `b` in the magic menu.  Changing your background color will not effect any of your artwork, although it is surprising how different your artwork may appear when placed atop a different background color.
@@ -65,7 +62,7 @@ This is just a personal observation.  If you like drawing, you'll find your own 
 
 Like Mr.doob's harmony, when you exit the app, drawit will *automatically* save the current state of your drawing (both background color and artwork) into your computer's `localStorage`.Thus you can resume whenever you please.  This applies only if your computer supports localStorage, as most do, but not ipads.
 
-You also can  **save** your drawing (both background and artwork) to your computer's hard disk by typing `save` (without quotes) into the magic menu. This will automatically open a new window with your drawing. From here you can right-click to open the context menu, and then select the 'save image as...' option from the menu.  Something like this should work even on ipads.  By default, canvas art is saved in the .png format. 
+You also can  **save** your drawing (both background and artwork) to your computer's hard disk by typing `save`  into the magic menu. This will automatically open a new window with your drawing. From here you can right-click to open the context menu, and then select the 'save image as...' option from the menu.  Something like this should work even on ipads.  By default, canvas art is saved in the .png format. 
 
 For ipads, saving to hard-disk has the drawback that your background color is 'hard baked' into your drawing; you  no longer can change it.  To mitigate this, drawit allows you to type `store` instead of `save` in the magic menu.  This will store your background color as a cookie, and only save your artwork (without a background color) to your hard disk.  
 When you resume, you'll see your old background color. Then, by typing `open` in the magic menu, you can open your saved artwork from your hard disk.  Now you can resume, and also change your background color if you  want.
