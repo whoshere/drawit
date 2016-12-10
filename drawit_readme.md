@@ -75,12 +75,13 @@ In google chrome, full-screen mode is toggled by pressing `F11`.
 
 <h2>An issue with google chrome</h2>
 
-<p>  Some web browsers, notably google chrome --- but apparently not firefox or safari, --- object to the canvas's get-image-data method with the terse message in the console:
-<p  class = 'c'>
-"unable to get image data from canvas because the canvas has been tainted by cross-origin data." 
-</p>
-<p> See  <a href="http://stackoverflow.com/questions/9972049/cross-origin-data-in-html5-canvas">this</a> stackoverflow discussion for more details. A workaround for the problem is to host canvas apps from a web-server. This is relevant to drawit because its photoshop paint brushes s(but not its harmony paint brushes) need to access the brushes' image data.
+  Some web browsers, notably google chrome --- but apparently not firefox or safari, --- object to the canvas's get-image-data method with the terse message in the console:
 
-<p>  It should be noted that github hosts  drawit via github pags. Hence users  will not experience any <u>tainted canvas</u> messages, which may occur if they try to use drawit directly on  google chrome, without a mediating web-server. 
+> "unable to get image data from canvas because the canvas has 
+> been tainted by cross-origin data." 
+
+ See  <a href="http://stackoverflow.com/questions/9972049/cross-origin-data-in-html5-canvas">this</a> stackoverflow discussion for more details. A workaround for the problem is to host canvas apps from a web-server. This is relevant to drawit because its photoshop paint brushes (but not its harmony paint brushes) need to access the brushes' image data.
+
+It should be noted that github hosts  drawit via github pags. Hence users  will not experience any _tainted canvas_ messages, which may occur if they try to use drawit directly on  google chrome, without a mediating web-server. 
 
 
