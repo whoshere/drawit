@@ -1,14 +1,20 @@
 
+<style>
+body {
+	margin: 0 3em 0 3em;
+}
+</style>
+
 Drawit
 ======
  
 
 Drawit is an HTML5 canvas drawing app. 
 
-> It offers a good selection of paint brushes for artists, including a few of Mr.doob's **harmony brushes**, 
+It offers a good selection of paint brushes for artists, including a few of Mr.doob's **harmony brushes**, 
 notably sketchy, shaded, and ribbon. It also ports to the  canvas element some **photoshop (PS) brushes**, including some of Alex
 Dukal's watercolor, pastel, and grunge brushes, and a few of 
-> Aramisdream's watercolor brushes.
+Aramisdream's watercolor brushes.
 
 <!--- ** or _ means boldface 
 	unordered list item uses * or + or -, indent items using 2 spaces
