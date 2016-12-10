@@ -38,6 +38,15 @@ When you first fire-up drawit, you are presented with a minimialistic drawing su
 
 Getting started
 ---------------
+You can run drawit from github pages at
+
+- <https://whoshere.github.io/drawit>.  
+
+The photoshop thumbnails may take a couple of minutes to  download, but then you'll be good to go.  Alternatively, you can install drawit directly onto your home computer (see the last section  below).
+<!-- 
+Alternatively, you can download the html and javascript files from github, and run drawit on your home computer.  Be sure to read the section 'An issue with google chrome' below.  To overcome the difficuolty, i have added a lightweight local server, QuickPhp by Zach Saw, to my windows computer.  
+-->
+
 
 To begin painting, select any color from the color-picker and then type `b` (without quotes) into the magic menu.  This will immediately add a _background color_ for your painting.
 
