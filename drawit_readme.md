@@ -19,7 +19,16 @@ Aramisdream's watercolor brushes.
 
 When you first fire-up drawit, you are presented with a minimialistic drawing surface.  Here's a screenshot of drawit's window, with a sample drawing included.
 
+
+![drawit screenshot](drawit.png)
+
+<!-- 
 <img src="drawit.png" height='100%' width='100%' style = 'margin:2em 0 2em 0;'/>
+
+![QuickSettings Panel](images/master_demo.png)
+
+![Animated gif](animation.gif "Animation that shows auto completion") 
+-->
 
 
  On the top row of drawit's window, one finds thumbnails of all the app's photoshop brushes (see screenshot).  On the second row one finds:
@@ -77,8 +86,8 @@ In google chrome, full-screen mode is toggled by pressing `F11`.
 
   Some web browsers, notably google chrome --- but apparently not firefox or safari, --- object to the canvas's get-image-data method with the terse message in the console:
 
-> "unable to get image data from canvas because the canvas has 
-> been tainted by cross-origin data." 
+> unable to get image data from canvas because the canvas has 
+> been tainted by cross-origin data.
 
  See  <a href="http://stackoverflow.com/questions/9972049/cross-origin-data-in-html5-canvas">this</a> stackoverflow discussion for more details. A workaround for the problem is to host canvas apps from a web-server. This is relevant to drawit because its photoshop paint brushes (but not its harmony paint brushes) need to access the brushes' image data.
 
