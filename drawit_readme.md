@@ -73,11 +73,16 @@ When you resume, you'll see your old background color. Then, by typing `open` in
 
 ## Adding an image
 
-If you want to include an image from your hard drive, simply type  `open` in the magic menu and browse to the desired image. This is how i included the drawing in the screenshot.
+If you want to include an image from your hard drive, 
+simply type  `open` in the magic menu 
+and browse to the desired image. 
+
+This is how i included the drawing in the screenshot.
 
 <h2>Try it in full-screen mode</h2>
 
- I find that using drawit with the browser set to <b>full screen</b> is the most fun because it offers the most immersive experience.   
+ I find that using drawit with the browser set to <b>full screen</b> is the most fun 
+ because it offers the most immersive experience.   
 
 In google chrome, full-screen mode is toggled by pressing `F11`.
 
@@ -105,5 +110,8 @@ If the console is not open, chrome will just give a silent messeage: no photosho
  A workaround for the problem is to host canvas apps from a web-server. Thus users who run drawit via github pages should not experience any problems, even with google chrome.
 
 Since i like google chrome and also like using drawit offline,
-my solution has been to  add a lightweight local server --- `QuickPhp` by Zach Saw, --- to my windows computer.  It works fine.
+my solution has been to  add a lightweight local server,
+`QuickPhp` by Zach Saw, 
+ to my windows computer.  
+It works fine.
 
