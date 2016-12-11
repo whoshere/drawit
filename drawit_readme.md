@@ -72,7 +72,7 @@ You also can  **save** your drawing (both background and artwork) to your comput
 When you resume, you'll see your old background color. Then, by typing `open` in the magic menu, you can open your saved artwork from your hard disk.  Now you can resume, and also change your background color if you  want.
  -->
 
-You can add any image on your hard disk, e.g., a previously-saved drawing, to drawit's main canvas by typing <button>open</button> in the magic menu.  This is how i included the drawing in the screenshot.
+If you want to add an image from your hard disk to drawit's main canvas, simply type <button>open</button> in the magic menu and browse to the desired image. This is how i included the drawing in the screenshot.
 
 <h2>Try it in full-screen mode</h2>
 
@@ -83,24 +83,25 @@ In google chrome, full-screen mode is toggled by pressing `F11`.
 
 ## Using drawit offline
 
-You can run drawit on your local computer by creating a new folder, say `drawit`,  adding the html file  `index.html`, the  javascript file
-`ashram_canvas_library_4.js`, and the folder `PS` which contains the photoshop brushes.
+You can run drawit on your local computer by creating a new empty folder, say `drawit`, and adding:
+
++ the html file  `index.html`, 
++ the  javascript file `ashram_canvas_library_4.js`, and
++ the folder `PS` which contains all of drawit's photoshop brushes.
 
 If your browser cooperates, you shoud now be able to use drawit whenever you please by firing up the html!
 
-### An issue with google chrome
+__An issue with google chrome:__
 
 Some web browsers, notably google chrome --- but apparently not firefox or safari, --- object to the canvas's get-image-data method with the terse message in the console:
 
 > unable to get image data from canvas because the canvas has 
 > been tainted by cross-origin data.
 
-If the console is not open, chrome will just give a silent messeage: no photoshop brush will work.
+If the console is not open, chrome will just give a silent messeage: no photoshop brush will work. See  <a href="http://stackoverflow.com/questions/9972049/cross-origin-data-in-html5-canvas">this</a> stackoverflow discussion for more details.
+ This is relevant to drawit because its photoshop paint brushes (but not its harmony paint brushes) need to access the brushes' image data. 
 
- See  <a href="http://stackoverflow.com/questions/9972049/cross-origin-data-in-html5-canvas">this</a> stackoverflow discussion for more details. A workaround for the problem is to host canvas apps from a web-server. This is relevant to drawit because its photoshop paint brushes (but not its harmony paint brushes) need to access the brushes' image data.
-
-It should be noted that users who run drawit via github pages should not experience any problems even with google chrome. 
-
+ A workaround for the problem is to host canvas apps from a web-server. Thus users who run drawit via github pages should not experience any problems even with google chrome. 
 Since i like google chrome and also like using drawit offline,
 my solution has been to  added a lightweight local server, `QuickPhp` by Zach Saw, to my windows computer.  It works fine.
 
