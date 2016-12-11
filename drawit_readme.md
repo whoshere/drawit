@@ -37,10 +37,10 @@ You can run drawit from github pages at
 
 - <https://whoshere.github.io/drawit>.  
 
-The photoshop thumbnails may take a couple of minutes to  download, but then you'll be good to go.  Being a web app, you also can run drawit offline; see the last section for details.
-<!-- 
-Alternatively, you can download the html and javascript files from github, and run drawit on your home computer.  Be sure to read the section 'An issue with google chrome' below.  To overcome the difficuolty, i have added a lightweight local server, QuickPhp by Zach Saw, to my windows computer.  
--->
+The photoshop thumbnails may take a couple of minutes to  download, but then you'll be good to go.  
+
+Being a web app, you also can run drawit offline. See the last section for details.
+
 
 
 To begin painting, select any color from the color-picker and then type `b` (without quotes) into the magic menu.  This will immediately add a _background color_ for your painting.
@@ -68,10 +68,11 @@ Like Mr.doob's harmony, when you exit the app, drawit will *automatically* save 
 
 You also can  **save** your drawing (both background and artwork) to your computer's hard disk by typing `save`  into the magic menu. This will automatically open a new window with your drawing. From here you can right-click to open the context menu, and then select the 'save image as...' option from the menu.  Something like this should work even on ipads.  By default, canvas art is saved in the .png format. 
 
-For ipads, saving to hard-disk has the drawback that your background color is 'hard baked' into your drawing; you  no longer can change it.  To mitigate this, drawit allows you to type `store` instead of `save` in the magic menu.  This will store your background color as a cookie, and only save your artwork (without a background color) to your hard disk.  
+<!-- For ipads, saving to hard-disk has the drawback that your background color is 'hard baked' into your drawing; you  no longer can change it.  To mitigate this, drawit allows you to type `store` instead of `save` in the magic menu.  This will store your background color as a cookie, and only save your artwork (without a background color) to your hard disk.  
 When you resume, you'll see your old background color. Then, by typing `open` in the magic menu, you can open your saved artwork from your hard disk.  Now you can resume, and also change your background color if you  want.
+ -->
 
-Typing `open` in the magic menu can be useful even on non-ipad computers:  it permits you to add any image on your hard disk to the main canvas. This is how i included the drawing in the screenshot.
+You can add any image on your hard disk, e.g., a previously-saved drawing, to drawit's main canvas by typing <button>open</button> in the magic menu.  This is how i included the drawing in the screenshot.
 
 <h2>Try it in full-screen mode</h2>
 
@@ -80,18 +81,26 @@ Typing `open` in the magic menu can be useful even on non-ipad computers:  it pe
 In google chrome, full-screen mode is toggled by pressing `F11`.
 
 
+## Using drawit offline
 
+You can run drawit on your local computer by creating a new folder, say `drawit`,  adding the html file  `index.html`, the  javascript file
+`ashram_canvas_library_4.js`, and the folder `PS` which contains the photoshop brushes.
 
+If your browser cooperates, you shoud now be able to use drawit whenever you please by firing up the html!
 
-<h2>An issue with google chrome</h2>
+### An issue with google chrome
 
-  Some web browsers, notably google chrome --- but apparently not firefox or safari, --- object to the canvas's get-image-data method with the terse message in the console:
+Some web browsers, notably google chrome --- but apparently not firefox or safari, --- object to the canvas's get-image-data method with the terse message in the console:
 
 > unable to get image data from canvas because the canvas has 
 > been tainted by cross-origin data.
 
+If the console is not open, chrome will just give a silent messeage: no photoshop brush will work.
+
  See  <a href="http://stackoverflow.com/questions/9972049/cross-origin-data-in-html5-canvas">this</a> stackoverflow discussion for more details. A workaround for the problem is to host canvas apps from a web-server. This is relevant to drawit because its photoshop paint brushes (but not its harmony paint brushes) need to access the brushes' image data.
 
-It should be noted that github hosts  drawit via github pags. Hence users  will not experience any _tainted canvas_ messages, which may occur if they try to use drawit directly on  google chrome, without a mediating web-server. 
+It should be noted that users who run drawit via github pages should not experience any problems even with google chrome. 
 
+Since i like google chrome and also like using drawit offline,
+my solution has been to  added a lightweight local server, `QuickPhp` by Zach Saw, to my windows computer.  It works fine.
 
