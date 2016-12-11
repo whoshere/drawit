@@ -15,15 +15,15 @@ notably sketchy, shaded, and ribbon. It also ports to the  canvas element some *
 
 -->
 
-When you first fire-up drawit, you are presented with a minimialistic drawing surface.  Here's a screenshot of drawit's window, with a sample drawing included.
+When you first fire-up Drawit, you are presented with a minimialistic drawing surface.  Here's a screenshot of drawit's window, with a sample drawing included.
 
 
-![drawit screenshot](drawit.png)
+![Drawit screenshot](drawit.png)
 <!-- 
 [alt text](relative or absolute path to image)
 -->
 
- On the top row of drawit's window, one finds thumbnails of all the app's photoshop brushes (see screenshot).  On the second row one finds:
+ On the top row of Drawit's window, one finds thumbnails of all the app's photoshop brushes (see screenshot).  On the second row one finds:
 
 + a color picker;
 + a drop-down menu with all the app's other brushes (including sketchy, shaded, ribbon, and an eraser); and 
@@ -33,12 +33,11 @@ When you first fire-up drawit, you are presented with a minimialistic drawing su
 
 Getting started
 ---------------
-You can run drawit from github pages at
+You can run Drawit from github pages at
 
 - <https://whoshere.github.io/drawit>.  
 
 The photoshop thumbnails may take a couple of minutes to  download, but then you'll be good to go.  
-
 Being a web app, you also can run drawit offline. See the last section for details.
 
 
@@ -72,7 +71,9 @@ You also can  **save** your drawing (both background and artwork) to your comput
 When you resume, you'll see your old background color. Then, by typing `open` in the magic menu, you can open your saved artwork from your hard disk.  Now you can resume, and also change your background color if you  want.
  -->
 
-If you want to add an image from your hard disk to drawit's main canvas, simply type <button>open</button> in the magic menu and browse to the desired image. This is how i included the drawing in the screenshot.
+## Adding an image
+
+If you want to include an image from your hard drive, simply type  `open` in the magic menu and browse to the desired image. This is how i included the drawing in the screenshot.
 
 <h2>Try it in full-screen mode</h2>
 
@@ -101,7 +102,8 @@ Some web browsers, notably google chrome --- but apparently not firefox or safar
 If the console is not open, chrome will just give a silent messeage: no photoshop brush will work. See  <a href="http://stackoverflow.com/questions/9972049/cross-origin-data-in-html5-canvas">this</a> stackoverflow discussion for more details.
  This is relevant to drawit because its photoshop paint brushes (but not its harmony paint brushes) need to access the brushes' image data. 
 
- A workaround for the problem is to host canvas apps from a web-server. Thus users who run drawit via github pages should not experience any problems even with google chrome. 
+ A workaround for the problem is to host canvas apps from a web-server. Thus users who run drawit via github pages should not experience any problems, even with google chrome.
+
 Since i like google chrome and also like using drawit offline,
-my solution has been to  added a lightweight local server, `QuickPhp` by Zach Saw, to my windows computer.  It works fine.
+my solution has been to  added a lightweight local server --- `QuickPhp` by Zach Saw, --- to my windows computer.  It works fine.
 
