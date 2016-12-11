@@ -4,9 +4,7 @@ Drawit
 Drawit is an HTML5 canvas drawing app. 
 
 It offers a good selection of paint brushes for artists, including a few of Mr.doob's **harmony brushes**, 
-notably sketchy, shaded, and ribbon. It also ports to the  canvas element some **photoshop (PS) brushes**, including some of Alex
-Dukal's watercolor, pastel, and grunge brushes, and a few of 
-Aramisdream's watercolor brushes.
+notably sketchy, shaded, and ribbon. It also ports to the  canvas element some **photoshop (PS) brushes**, including some of Alex Dukal's watercolor, pastel, and grunge brushes, and a few of Aramisdream's watercolor brushes.
 
 <!--- ** or _ means boldface 
 	unordered list item uses * or + or -, indent items using 2 spaces
@@ -21,12 +19,9 @@ When you first fire-up drawit, you are presented with a minimialistic drawing su
 
 
 ![drawit screenshot](drawit.png)
-
 <!-- 
 [alt text](relative or absolute path to image)
 -->
-
-
 
  On the top row of drawit's window, one finds thumbnails of all the app's photoshop brushes (see screenshot).  On the second row one finds:
 
@@ -42,7 +37,7 @@ You can run drawit from github pages at
 
 - <https://whoshere.github.io/drawit>.  
 
-The photoshop thumbnails may take a couple of minutes to  download, but then you'll be good to go.  Alternatively, you can install drawit directly onto your home computer (see the last section  below).
+The photoshop thumbnails may take a couple of minutes to  download, but then you'll be good to go.  Being a web app, you also can run drawit offline; see the last section for details.
 <!-- 
 Alternatively, you can download the html and javascript files from github, and run drawit on your home computer.  Be sure to read the section 'An issue with google chrome' below.  To overcome the difficuolty, i have added a lightweight local server, QuickPhp by Zach Saw, to my windows computer.  
 -->
